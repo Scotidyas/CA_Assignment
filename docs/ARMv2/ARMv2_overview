@@ -16,9 +16,18 @@ Regarding power consumption, the manufacturer’s datasheet specified a maximum 
 
 The equipment built around this processor, such as the Acorn Archimedes A300 series, typically followed a desktop form factor with separate peripherals. The main unit of the A310 measured 362mm in width, 406mm in depth, and 97mm in height, and it was powered by a 50-watt power supply unit. Later models like the Acorn Archimedes A3000 integrated the motherboard and keyboard into a single "all-in-one" chassis. This unit measured 470mm by 380mm and ran on an internal power supply rated at 22 Watts.
 
+2.What type of architecture did both computers have? Were they
+accumulator based, register based, stack based, memory-to-memory or
+some other architectures?
+
+
+The ARMv2 architecture, utilized in the VL86C010 processor, was a General Purpose Register (GPR) architecture, specifically classified as a Load/Store architecture. This design was different from accumulator-based architectures (such as the MOS 6502) or stack-based architectures. In the ARMv2 design, the processor could not perform arithmetic or logical operations directly on memory addresses. Instead, all processing happened within the internal register file. Data had to be explicitly loaded from memory into a register before it could be manipulated, and the results had to be stored back to memory using separate instructions.
+
+This architecture relied on a bank of 27 physical 32-bit registers, but the programmer generally accessed a set of 16 logical registers (R0 through R15) in any given processor mode. This allowed the processor to save or keep variables locally available, this way it reduced the need to access slower main memory. A specific characteristic of the ARMv2 implementation was the usage of register R15. This register functioned as the Program Counter (PC) but also contained the Processor Status Register (PSR) flags in the upper bits. This dual usage of R15 restricted the addressable memory space to 26 bits or 64 MB.
 
 
 references:
+Seal, D. (Ed.). (2000). ARM Architecture Reference Manual
 VLSI Technology Inc. VL86C010 32-Bit RISC Microprocessor Data Manual
 Furber, S. (2000). ARM System-on-Chip Architecture (2nd Ed.)
 LSI Technology Inc. VL86C010 32-Bit RISC Microprocessor Data Manual
