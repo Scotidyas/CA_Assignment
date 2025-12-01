@@ -1,3 +1,4 @@
+Designed by Acorn Computers (Cambridge, UK); manufactured by VLSI Technology, Inc. (USA).
 The official Acorn RISC Machine project started in October 1983
 The first samples of ARM silicon worked properly when first received and tested on 26 April 1985.
 
@@ -6,3 +7,26 @@ Elementary base:
 Type: Very Large Scale Integration (VLSI) using Integrated Circuits (ICs).
 Technology: 2-micron CMOS with double-layer metal interconnects.
 Architecture: RISC (Reduced Instruction Set Computer). 
+
+Processor Physical Characteristics (ARM2 VL86C010)
+
+Transistor Count: ~30,000. 
+
+Die Size: ~34 mm² (5.842 x 5.842 mm). 
+
+Power Consumption: < 1 Watt (Typically ~120mW to 630mW).
+
+Thermal: Ran cool; required no heatsink or active cooling fan on the chip.
+
+Packaging: 84-pin Plastic Leaded Chip Carrier (PLCC).
+
+Equipment Physical Characteristics (Acorn Archimedes)
+
+Weight: ~8.1 kg.
+
+Dimensions: 362 mm  x 406 mm  x 97 mm (DWH).
+
+Power Supply: 200 Watts (Switch-mode PSU).
+
+Note: The CPU used <1W; the bulk of the power was for the hard drives and expansion slots.
+
