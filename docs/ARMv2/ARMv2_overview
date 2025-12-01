@@ -25,6 +25,12 @@ The ARMv2 architecture, utilized in the VL86C010 processor, was a General Purpos
 
 This architecture relied on a bank of 27 physical 32-bit registers, but the programmer generally accessed a set of 16 logical registers (R0 through R15) in any given processor mode. This allowed the processor to save or keep variables locally available, this way it reduced the need to access slower main memory. A specific characteristic of the ARMv2 implementation was the usage of register R15. This register functioned as the Program Counter (PC) but also contained the Processor Status Register (PSR) flags in the upper bits. This dual usage of R15 restricted the addressable memory space to 26 bits or 64 MB.
 
+3. Were they zero-address, one-address, two-address, three-address or
+four address machines?
+
+The ARMv2 architecture is strictly classified as a three-address machine. Data processing instructions explicitly specify three distinct operands: a destination register (Rd) and two source operands (Rn and Operand2). For example, the instruction ADD R0, R1, R2 calculates the sum of R1 and R2 and places the result into R0.
+
+4. 
 
 references:
 Seal, D. (Ed.). (2000). ARM Architecture Reference Manual
