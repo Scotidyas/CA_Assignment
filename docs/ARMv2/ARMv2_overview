@@ -70,7 +70,7 @@ The ARMv2 architecture utilized Memory-Mapped I/O. It did not possess separate I
 
 12. Were interrupts supported?
 
-The architecture supported two primary types of hardware interrupts: IRQ and FIQ. The interrupt vector table was located at the bottom of memory, starting at address 0x00000000. When an exception occurred, the processor jumped to a specific vector address.
+The architecture supported two primary types of hardware interrupts: IRQ and FIQ. The interrupt vector table was located at the bottom of memory, starting at address 0x00000000. When an exception occu red, the processor jumped to a specific vector address.
 
 13. What data types did each architecture support?
 
@@ -79,6 +79,15 @@ At the hardware instruction level, the ARMv2 supported 32 bit signed and unsigne
 14. What was the speed of each system?
 
 The ARM2 processor in the Acorn Archimedes typically operated at a clock frequency of 8 MHz, with later variants running at 12 MHz. Despite this relatively low clock speed, the RISC architecture allowed it to achieve approximately 4 to 5 MIPS. Most instructions executed in a single cycle, except memory accesses and complex instructions took longer.
+
+15. Did the architectures use cache memory?
+
+The ARMv2 processor did not use on-chip cache memory. It relied on the speed of Fast Page Mode DRAM and the MEMC to feed instructions to the processor. The lack of cache was a design choice to keep the transistor count and cost low.
+
+16. What were the typical application areas?
+
+The primary application area  was the educational market in the United Kingdom. It was the standard computer in many British schools during the late 1980s and early 1990s. Beyond education, it was used in desktop publishing and television production due to its graphical capabilities.
+
 
 
 
