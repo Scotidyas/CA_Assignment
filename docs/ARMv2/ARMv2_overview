@@ -64,6 +64,14 @@ modes several standard techniques used to specify the desired location. Most ARM
 support several of these addressing modes though few support all of them. AMRv2 supports immediate, register,
 register indirect, pre-indexed, post-indexed, PC relative and multiple register. (Google Gemini, "what addresing modes does armv2 support")
 
+11. What were the I/O capabilities of each architecture?
+
+The ARMv2 architecture utilized Memory-Mapped I/O. It did not possess separate I/O instructions or a distinct I/O address space. Peripheral devices appeared to the processor as standard memory addresses. In the Acorn Archimedes implementation the IOC handled interrupts and peripherals like timers and the keyboard.
+
+
+
+
+
 
 
 references:
