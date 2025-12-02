@@ -76,6 +76,10 @@ The architecture supported two primary types of hardware interrupts: IRQ and FIQ
 
 At the hardware instruction level, the ARMv2 supported 32 bit signed and unsigned words and 8 bit signed and unsigned bytes. Integers were processed as Two's Complement signed values or unsigned values depending on the instruction interpretation. Floating-point arithmetic was not supported natively by the ARM2 hardware. Floating-point operations were typically handled via software emulation. While the instruction set reserved opcodes for coprocessors. Consequently, complex data types like decimal numbers or complex numbers had to be implemented entirely in software libraries.
 
+14. What was the speed of each system?
+
+The ARM2 processor in the Acorn Archimedes typically operated at a clock frequency of 8 MHz, with later variants running at 12 MHz. Despite this relatively low clock speed, the RISC architecture allowed it to achieve approximately 4 to 5 MIPS. Most instructions executed in a single cycle, except memory accesses and complex instructions took longer.
+
 
 
 
