@@ -89,7 +89,9 @@ The ARMv2 processor did not use on-chip cache memory. It relied on the speed of 
 The primary application area  was the educational market in the United Kingdom. It was the standard computer in many British schools during the late 1980s and early 1990s. Beyond education, it was used in desktop publishing and television production due to its graphical capabilities.
 
 
+17. How much software was written for each discussed architecture?
 
+A moderate library of software was produced for the ARMv2, specifically targeting the RISC OS operating system. The software was mainly targeted towards education, productivity and utilities.Game library also existed, including the seminal game Zarch mainly used to showcase the machine speed. When it comes to tools it supported "BBC BASIC V" and also it had Acord C/C++ compiler suite.
 
 
 
