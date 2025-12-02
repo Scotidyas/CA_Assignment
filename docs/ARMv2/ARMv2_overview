@@ -57,6 +57,14 @@ Virtual memory support in ARMv2 systems was implemented via the MEMC chip, which
 
 The Instruction Set Architecture of the ARMv2 was a Reduced Instruction Set Computer design containing a small set of approximately 44 to 46 instructions. There were five primary classes which are data processing instructions, data transfer instructions, control flow instructions, coprocessor instructions, and the Software Interrupt. All ARM instructions are 32 bits wide except the compressed 16-bit Thumb instructions.
 
+10. What were the addressing modes supported?
+
+When accessing an operand for a data processing or movement instruction, there are
+modes several standard techniques used to specify the desired location. Most ARM processors
+support several of these addressing modes though few support all of them. AMRv2 supports immediate, register,
+register indirect, pre-indexed, post-indexed, PC relative and multiple register. (Google Gemini, "what addresing modes does armv2 support")
+
+
 
 references:
 Seal, D. (Ed.). (2000). ARM Architecture Reference Manual
