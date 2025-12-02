@@ -68,6 +68,13 @@ register indirect, pre-indexed, post-indexed, PC relative and multiple register.
 
 The ARMv2 architecture utilized Memory-Mapped I/O. It did not possess separate I/O instructions or a distinct I/O address space. Peripheral devices appeared to the processor as standard memory addresses. In the Acorn Archimedes implementation the IOC handled interrupts and peripherals like timers and the keyboard.
 
+12. Were interrupts supported?
+
+The architecture supported two primary types of hardware interrupts: IRQ and FIQ. The interrupt vector table was located at the bottom of memory, starting at address 0x00000000. When an exception occurred, the processor jumped to a specific vector address.
+
+13. What data types did each architecture support?
+
+At the hardware instruction level, the ARMv2 supported 32 bit signed and unsigned words and 8 bit signed and unsigned bytes. Integers were processed as Two's Complement signed values or unsigned values depending on the instruction interpretation. Floating-point arithmetic was not supported natively by the ARM2 hardware. Floating-point operations were typically handled via software emulation. While the instruction set reserved opcodes for coprocessors. Consequently, complex data types like decimal numbers or complex numbers had to be implemented entirely in software libraries.
 
 
 
