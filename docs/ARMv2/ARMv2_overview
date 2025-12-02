@@ -49,6 +49,14 @@ The ARMv2 was a 32 bit it architecture with a native machine word of 32 bits. Al
 
 The memory layout of the ARMv2 systems, specifically the Acorn Archimedes, was defined by the MEMC chip. The architecture utilized a logical address space of 64 MB , even though the physical data bus was 32 bits wide. This 26 bit limitation arose because the upper 6 bits and lower 2 bits of the Program Counter were reserved for status flags, leaving only bits 2 to 25 for addressing. The address space was segmented in a linear space divided into logical pages. The physical memory was subdivided into banks controlled by the MEMC. This controller managed the mapping between the logical address space seen by the software and the physical RAM chips. The maximum possible physical RAM supported by the MEMC was 4 MB. Typical system configurations for the Acorn Archimedes ranged from 1 MB in the base A310 or A3000 models up to 4 MB in expanded machines. While the theoretical address space was 64 MB, the actual installed memory was significantly smaller due to the cost of RAM at the time and the limitations of the memory controller.
 
+8. Was virtual memory supported, and how?
+
+Virtual memory support in ARMv2 systems was implemented via the MEMC chip, which acted as a Memory Management Unit. It utilized a paging mechanism rather than segmentation. The MEMC translated logical addresses into physical addresses using a single-level page table stored in physical memory. The page size was programmable, typically ranging from 4 KB to 32 KB depending on the amount of installed RAM. But it did not support swapping pages to disk.
+
+9. What was the ISA of each architecture?
+
+The Instruction Set Architecture of the ARMv2 was a Reduced Instruction Set Computer design containing a small set of approximately 44 to 46 instructions. There were five primary classes which are data processing instructions, data transfer instructions, control flow instructions, coprocessor instructions, and the Software Interrupt. All ARM instructions are 32 bits wide except the compressed 16-bit Thumb instructions.
+
 
 references:
 Seal, D. (Ed.). (2000). ARM Architecture Reference Manual
