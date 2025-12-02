@@ -45,6 +45,11 @@ The ARMv2 architecture used status flags to indicate arithmetic results and cont
 
 The ARMv2 was a 32 bit it architecture with a native machine word of 32 bits. All internal registers, the Arithmetic Logic Unit (ALU), and the external data bus measured 32 bits. This design enabled the manipulation of 32-bit integers in a single instruction cycle. The architecture supported 8 bit byte and 32 bit word data transfers but lacked native support for 16 bit half word transfers. While the data path was 32 bits wide, the addressable memory space was restricted to 26 bits (64MB) because the upper and lower bits of the Program Counter were used for the status flags.
 
+7. What was the memory layout of each system?
+
+The memory layout of the ARMv2 systems, specifically the Acorn Archimedes, was defined by the MEMC chip. The architecture utilized a logical address space of 64 MB , even though the physical data bus was 32 bits wide. This 26 bit limitation arose because the upper 6 bits and lower 2 bits of the Program Counter were reserved for status flags, leaving only bits 2 to 25 for addressing. The address space was segmented in a linear space divided into logical pages. The physical memory was subdivided into banks controlled by the MEMC. This controller managed the mapping between the logical address space seen by the software and the physical RAM chips. The maximum possible physical RAM supported by the MEMC was 4 MB. Typical system configurations for the Acorn Archimedes ranged from 1 MB in the base A310 or A3000 models up to 4 MB in expanded machines. While the theoretical address space was 64 MB, the actual installed memory was significantly smaller due to the cost of RAM at the time and the limitations of the memory controller.
+
+
 references:
 Seal, D. (Ed.). (2000). ARM Architecture Reference Manual
 VLSI Technology Inc. VL86C010 32-Bit RISC Microprocessor Data Manual
