@@ -38,27 +38,17 @@ The ARMv2 was a 32-bit architecture with a native machine word of 32 bits. All i
 
 The SLC 500 architecture is based on a 16-bit machine word. Input, Output, Status, and Integer files are all composed of 16-bit elements (Rockwell Automation, 2008a ). However, the architecture supports 32-bit operations synthetically. For example, Floating Point (F8) data files use 2-word elements (32 bits per element) to store single-precision numbers (Rockwell Automation, 2008a ). Furthermore, the Math Overflow Selection Bit (S:2/14) allows the processor to perform 32-bit signed math by cascading calculations across 16-bit words (Rockwell Automation, 2008a ).
 
+Memory Layout
+
+The memory layout of the ARMv2 systems, specifically the Acorn Archimedes, was defined by the MEMC chip. The architecture utilized a logical address space of 64 MB, even though the physical data bus was 32 bits wide. This 26-bit limitation arose because the upper 6 bits and lower 2 bits of the Program Counter were reserved for status flags, leaving only bits 2 to 25 for addressing (Seal, 2000). The address space was segmented in a linear space divided into logical pages. The physical memory was subdivided into banks controlled by the MEMC. This controller managed the mapping between the logical address space seen by the software and the physical RAM chips. The maximum possible physical RAM supported by the MEMC was 4 MB. Typical system configurations for the Acorn Archimedes ranged from 1 MB in the base A310 or A3000 models up to 4 MB in expanded machines. While the theoretical address space was 64 MB, the actual installed memory was significantly smaller due to the cost of RAM at the time and the limitations of the memory controller.
+
+The SLC 500 memory is segmented into Program Files and Data Files (Rockwell Automation, 2008a ). Program files (ID 0-255) contain system information and ladder logic, while Data Files (ID 0-255) store status information and data variables (Rockwell Automation, 2008a ). The addressing space is not continuous but is file-based; for example, Output files are file 0, Input files are file 1, and Integer files are file 7 (Rockwell Automation, 2008a ). The maximum possible memory varies by processor model: the SLC 5/01 supports 1K or 4K instruction words, whereas the SLC 5/03, 5/04, and 5/05 support up to 64K words (Rockwell Automation, 2013 ).
 
 
+Virtual Memory
 
+Virtual memory support in ARMv2 systems was implemented via the MEMC chip, which acted as a Memory Management Unit. It utilized a paging mechanism rather than segmentation. The MEMC translated logical addresses into physical addresses using a single-level page table stored in physical memory. The page size was programmable, typically ranging from 4 KB to 32 KB depending on the amount of installed RAM (Furber, 2000). But it did not support swapping pages to disk.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The SLC 500 architecture does not support virtual memory. It utilizes a static memory system where user memory is comprised of specific Data Files and Program Files. Data is stored in pre-allocated tables specific to its function—such as File 0 for Outputs, File 1 for Inputs, File 4 for Timers, and File 7 for Integers—while logic is stored separately in Program files. To maintain this static map, the system relies on volatile RAM that is kept alive during power outages by a lithium battery, with the option of using a non-volatile Flash EPROM module to permanently burn the program and data.(Rockwell Automation, 2008a; Rockwell Automation, 2013 ).
 
 
