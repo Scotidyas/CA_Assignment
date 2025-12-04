@@ -32,6 +32,12 @@ The ARMv2 architecture used status flags to indicate arithmetic results and cont
 
 The SLC 500 utilizes arithmetic status flags located in Word 0 of the Status File (S:0) (Rockwell Automation, 2008a ). These flags include the Carry (C) bit (S:0/0), which is set if a carry is generated; the Overflow (V) bit (S:0/1), which sets if a result does not fit in the destination; the Zero (Z) bit (S:0/2), which sets if a result is zero; and the Sign (S) bit (S:0/3), which sets if a result is negative (Rockwell Automation, 2008a ). Additionally, a Minor Error bit (S:5/0) serves as an overflow trap bit to detect mathematical overflows (Rockwell Automation, 2008a ).
 
+Machine Word Width
+
+The ARMv2 was a 32-bit architecture with a native machine word of 32 bits. All internal registers, the Arithmetic Logic Unit (ALU), and the external data bus measured 32 bits (Furber, 2000). This design enabled the manipulation of 32-bit integers in a single instruction cycle. The architecture supported 8-bit byte and 32-bit word data transfers but lacked native support for 16-bit half-word transfers. While the data path was 32 bits wide, the addressable memory space was restricted to 26 bits (64MB) because the upper and lower bits of the Program Counter were used for the status flags.
+
+The SLC 500 architecture is based on a 16-bit machine word. Input, Output, Status, and Integer files are all composed of 16-bit elements (Rockwell Automation, 2008a ). However, the architecture supports 32-bit operations synthetically. For example, Floating Point (F8) data files use 2-word elements (32 bits per element) to store single-precision numbers (Rockwell Automation, 2008a ). Furthermore, the Math Overflow Selection Bit (S:2/14) allows the processor to perform 32-bit signed math by cascading calculations across 16-bit words (Rockwell Automation, 2008a ).
+
 
 
 
