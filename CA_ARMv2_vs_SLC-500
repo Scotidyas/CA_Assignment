@@ -7,3 +7,39 @@ The elementary base of the ARMv2 architecture was Very Large Scale Integration (
 In contrast, the elementary base of the SLC 500 is a modular, chassis-based programmable controller system rather than a single-chip implementation. The system is composed of a processor module, power supply, and I/O modules housed in a 4, 7, 10, or 13-slot chassis (Rockwell Automation, 2013 ). The processor modules, such as the SLC 5/03, 5/04, and 5/05, utilize modern solid-state microprocessors and Large Scale Integration (LSI) components designed to withstand industrial vibration, thermal extremes, and electrical noise (Rockwell Automation, 2013 ). Physically, the equipment is ruggedized for back-panel mounting; for example, a 4-slot modular chassis measures approximately 158mm in height, 171mm in width, and 145mm in depth (Rockwell Automation, 2013 ). Power consumption is dependent on the specific modules used; for instance, an SLC 5/03 processor draws 500 mA at 5V DC from the backplane, while an SLC 5/05 draws 1000 mA at 5V DC (Rockwell Automation, 2013 ). The system requires a dedicated power supply (e.g., 1746-P1) capable of handling high inrush currents up to 20 A (Rockwell Automation, 2013 ).
 
 Architecture Type
+
+The ARMv2 architecture, utilized in the VL8C010 processor, was a General Purpose Register (GPR) architecture (Seal, 200). This design was different from accumulator-based architectures or stack-based architecture. In the ARMv2 design, the processor could not perform arithmetic of logical operations directly  on memory addresses. Instead, al processing happened within the internal register file. Data had to be explicitly loaded from memory into a register before it could be manipulated, and the results had to be stored back to memory using separate instructions (Furber, 2000). This architecture relied on a bank of 27 physical 32 bit registers, but the programmer generally accessed a set of 16 logical registers (R0 through R15) in any given processor mode. A specific characteristic of the ARMv2 implementation was the usage of register R15. This register functioned as the Program Counter (PC), but also contained the Processor Status Register flags in the upper bits. This dual usage of R15 restricted the addressable memory space to 26 bits or 64 MB (Seal, 2000).
+
+
+The SLC 500 architecture operates primarily as a memory-to-memory machine from the programmers perspective, utilizing a proprietary scanning architecture optimized for logic solving. The processor provides control through a processor file composed of Program Files and Data Files such as Output, Input, Status, Binary, Timer, Counter, Control, Integer, and Float (Rockwell Automation, 2008). Instructions typically operate directly on these data files rather than loading data into general-purpose registers first. For example, mathematical instructions take input values from specific memory addresses, perform the operation, and output the result to a destination memory address (Rockwell Automation, 2008).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
