@@ -76,3 +76,19 @@ The architecture supported two primary types of hardware interrupts: IRQ and FIQ
 
 The SLC 500 supports user-configurable interrupt routines. These include the Selectable Timed Interrupt (STI), which interrupts the scan on a periodic basis to scan a specified subroutine (Rockwell Automation, 2008a ), and the Discrete Input Interrupt (DII), which executes a subroutine when a specific input bit pattern matches a programmed compare value (Rockwell Automation, 2008a ). The SLC 500 also includes a User Fault Routine to handle system faults without shutting down the processor (Rockwell Automation, 2008a ).
 
+Data Types
+
+At the hardware instruction level, the ARMv2 supported 32-bit signed and unsigned words and 8-bit signed and unsigned bytes (Furber, 2000). Integers were processed as Two's Complement signed values or unsigned values depending on the instruction interpretation. Floating-point arithmetic was not supported natively by the ARM2 hardware. Floating-point operations were typically handled via software emulation. While the instruction set reserved opcodes for coprocessors. Consequently, complex data types like decimal numbers or complex numbers had to be implemented entirely in software libraries.
+
+The SLC 500 supports specific data types defined by its file structure. These include Bit , Integer which stores 16-bit signed values, and Floating Point which stores 32-bit IEEE single-precision numbers (available on SLC 5/03 OS301 and higher). It also supports ASCII and String file types for text manipulation, as well as structured data types for Timers, Counters, and Control (Rockwell Automation, 2008a ).
+
+System Speed
+
+The ARM2 processor in the Acorn Archimedes typically operated at a clock frequency of 8 MHz, with later variants running at 12 MHz. Despite this relatively low clock speed, the RISC architecture allowed it to achieve approximately 4 to 5 MIPS. Most instructions executed in a single cycle, except memory accesses and complex instructions took longer (Furber, 2000).
+
+The SLC 500 speed is characterized by "Typical Scan Time," which is the time to execute 1K of ladder logic. The SLC 5/01 has a typical scan time of 8.0 ms/K, while the SLC 5/03 is significantly faster at 1.0 ms/K, and the SLC 5/05 is 0.9 ms/K. Bit execution times are 4 µs for the SLC 5/01 and 0.37 µs for the SLC 5/05 (Rockwell Automation, 2013 ).
+
+
+
+
+
