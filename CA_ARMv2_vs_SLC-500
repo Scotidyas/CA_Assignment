@@ -19,11 +19,18 @@ The ARMv2 architecture is strictly classified as a three-address machine (Seal, 
 
 The SLC 500 also functions largely as a three-address machine for its arithmetic and logical operations. Majority of the instructions, such as ADD and SUB, take two input values (Source A and Source B) and place the result in a specified Destination address (Rockwell Automation, 2008 ). Some instructions, however, utilize a two-address format, such as the MOV instruction, which moves a Source value to a Destination location (Rockwell Automation, 2008a ), or the NEG instruction, which changes the sign of a Source and places it in a Destination (Rockwell Automation, 2008 ).
 
+Registers
+
+The ARMv2 architecture was a Load/Store machine utilizing a set of 32-bit General Purpose Registers (GPR), it had 27 physical registers. Using called register banking, the processor exposed only 16 logical registers (R0 through R15) to the programmer at any one time, swapping specific physical registers automatically during mode switches to isolate interruption contexts (Furber, 2000). While for the most part it was general-purpose, specific registers held specialized roles. For example R13 served by convention as a Stack Pointer, R14 acted as a Link Register for return addresses, and R15 uniquely combined the Program Counter and Processor Status Register into a single 32-bit value (Seal, 2000).
+
+The SLC 500 does not utilize General Purpose Registers in the traditional sense. Instead, it uses a Data Table organized into specific file types that act as memory-mapped registers (Rockwell Automation, 2008a ). For example, the Status File (S2) stores controller operation information, and the Integer File (N7) is used to store numeric values (Rockwell Automation, 2008a ). The system does utilize specific internal registers for math operations; Status word S:13 and S:14 act as a "Math Register" to store the 32 bit results of multiply instructions or the remainder/quotient of divide instructions (Rockwell Automation, 2008a ). Additionally, an Index Register (S:24) is provided to store offset values for indexed addressing operations (Rockwell Automation, 2008a ).
 
 
+Flags
 
+The ARMv2 architecture used status flags to indicate arithmetic results and control program flow. These flags resided in the upper six bits of register R15, with the Program Counter. The four condition flags were N (Negative), Z (Zero), C (Carry), and V (Overflow) (Seal, 2000). Instructions updated these flags only when the "S" bit was set in the opcode. R15 also held two interrupt disable flags, I (IRQ Disable) and F (FIQ Disable). Placing these flags within the PC register made sure that saving R15 automatically preserved the processor status during interrupts or other subroutine calls.
 
-
+The SLC 500 utilizes arithmetic status flags located in Word 0 of the Status File (S:0) (Rockwell Automation, 2008a ). These flags include the Carry (C) bit (S:0/0), which is set if a carry is generated; the Overflow (V) bit (S:0/1), which sets if a result does not fit in the destination; the Zero (Z) bit (S:0/2), which sets if a result is zero; and the Sign (S) bit (S:0/3), which sets if a result is negative (Rockwell Automation, 2008a ). Additionally, a Minor Error bit (S:5/0) serves as an overflow trap bit to detect mathematical overflows (Rockwell Automation, 2008a ).
 
 
 
