@@ -52,3 +52,21 @@ Virtual memory support in ARMv2 systems was implemented via the MEMC chip, which
 The SLC 500 architecture does not support virtual memory. It utilizes a static memory system where user memory is comprised of specific Data Files and Program Files. Data is stored in pre-allocated tables specific to its function—such as File 0 for Outputs, File 1 for Inputs, File 4 for Timers, and File 7 for Integers—while logic is stored separately in Program files. To maintain this static map, the system relies on volatile RAM that is kept alive during power outages by a lithium battery, with the option of using a non-volatile Flash EPROM module to permanently burn the program and data.(Rockwell Automation, 2008a; Rockwell Automation, 2013 ).
 
 
+Instruction Set Architecture
+
+The Instruction Set Architecture of the ARMv2 was a Reduced Instruction Set Computer design containing a small set of approximately 44 to 46 instructions. There were five primary classes which are data processing instructions, data transfer instructions, control flow instructions, coprocessor instructions, and the Software Interrupt (Seal, 2000). All ARM instructions are 32 bits wide except the compressed 16-bit Thumb instructions.
+
+The SLC 500 uses a proprietary Instruction Set Architecture represented by Ladder Logic (LAD). The instruction set varies by processor model; the SLC 5/01 supports a basic set of 52 instructions, while the SLC 5/03 and higher support over 100 instructions (Rockwell Automation, 2013 ). The instructions are categorized into functional groups including Bit, Timer and Counter, Compare, Compute/Math, Logical, Move, and Program Control (Rockwell Automation, 2013 ). Examples include XIC (Examine if Closed), TON (Timer On-Delay), MOV (Move), and PID (Proportional Integral Derivative) (Rockwell Automation, 2013 ).
+
+Addressing Modes
+
+When accessing an operand for a data processing or movement instruction, there are several standard techniques used to specify the desired location. Most ARM processors support several of these addressing modes though few support all of them. ARMv2 supports immediate, register, register indirect, pre-indexed, post-indexed, PC relative and multiple register (Seal, 2000).
+
+The SLC 500 supports several addressing modes including Direct Addressing, where data is stored in a specific address (e.g., N7:0); Indexed Addressing, indicated by a # symbol (e.g., #N7:10), where the processor adds the value in the Index Register (S:24) to the base address; and Indirect Addressing, available on SLC 5/03 and higher, where a substitute address is enclosed in brackets (e.g., N7:[N10:3]) (Rockwell Automation, 2008a ).
+
+I/O Capabilities
+
+The ARMv2 architecture utilized Memory-Mapped I/O. It did not possess separate I/O instructions or a distinct I/O address space. Peripheral devices appeared to the processor as standard memory addresses. In the Acorn Archimedes implementation the IOC handled interrupts and peripherals like timers and the keyboard (Furber, 2000).
+
+The SLC 500 is optimized for I/O control, utilizing a modular chassis system where I/O modules communicate across a backplane (Rockwell Automation, 2013 ). The processor updates Input (I1) and Output (O0) data files synchronously with the program scan (Rockwell Automation, 2008a ). Additionally, SLC 5/02 and higher processors support Block Transfer Read (BTR) and Block Transfer Write (BTW) instructions for transferring larger blocks of data to remote devices over a Remote I/O link (Rockwell Automation, 2008a ).
+
