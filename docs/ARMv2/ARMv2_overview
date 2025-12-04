@@ -1,7 +1,7 @@
 
 
 
-1. What was the elementary base of a computer/processor (relays,
+What was the elementary base of a computer/processor (relays,
 vacuum tubes (aka thermoionic valves), transistors, magnetic cores,
 integrated circuits (ICs) – were they hybrid, low scale integration,
 Large Scale Integration (LSI), Very Large Scale Integration (VLSI),
@@ -16,7 +16,7 @@ Regarding power consumption, the manufacturer’s datasheet specified a maximum 
 
 The equipment built around this processor, such as the Acorn Archimedes A300 series, typically followed a desktop form factor with separate peripherals. The main unit of the A310 measured 362mm in width, 406mm in depth, and 97mm in height, and it was powered by a 50-watt power supply unit. Later models like the Acorn Archimedes A3000 integrated the motherboard and keyboard into a single "all-in-one" chassis. This unit measured 470mm by 380mm and ran on an internal power supply rated at 22 Watts.
 
-2.What type of architecture did both computers have? Were they
+What type of architecture did both computers have? Were they
 accumulator based, register based, stack based, memory-to-memory or
 some other architectures?
 
@@ -25,71 +25,70 @@ The ARMv2 architecture, utilized in the VL86C010 processor, was a General Purpos
 
 This architecture relied on a bank of 27 physical 32 bit registers, but the programmer generally accessed a set of 16 logical registers (R0 through R15) in any given processor mode. This allowed the processor to save or keep variables locally available, this way it reduced the need to access slower main memory. A specific characteristic of the ARMv2 implementation was the usage of register R15. This register functioned as the Program Counter (PC) but also contained the Processor Status Register (PSR) flags in the upper bits. This dual usage of R15 restricted the addressable memory space to 26 bits or 64 MB.
 
-3. Were they zero-address, one-address, two-address, three-address or
+ Were they zero-address, one-address, two-address, three-address or
 four address machines?
 
 The ARMv2 architecture is strictly classified as a three-address machine. Data processing instructions explicitly specify three distinct operands: a destination register (Rd) and two source operands (Rn and Operand2). For example, the instruction ADD R0, R1, R2 calculates the sum of R1 and R2 and places the result into R0.
 
-4. What were the registers in both architectures? Did they have
+ What were the registers in both architectures? Did they have
 registers at all? Were they general purpose registers or specialised
 ones? How many registers did each architecture have? What were the
 widths of these registers?
 
 The ARMv2 architecture was a Load/Store machine utilizing a set of 32 bit General Purpose Registers (GPR), it had 27 physical registers. Using called register banking, the processor exposed only 16 logical registers (R0 through R15) to the programmer at any one time, swapping specific physical registers automaticaly during mode switches to isolate interruption contexts. While for the most part it was general-purpose, specific registers held specialized roles. For example R13 served by convention as a Stack Pointer, R14 acted as a Link Register for return addresses, and R15 uniquely combined the Program Counter and Processor Status Register into a single 32 bit value.
 
-5. Were the flags used in the architecture? What flags were there?
+ Were the flags used in the architecture? What flags were there?
 
 The ARMv2 architecture used status flags to indicate arithmetic results and control program flow. These flags resided in the upper six bits of register R15, with the Program Counter. The four condition flags were N (Negative), Z (Zero), C (Carry), and V (Overflow). Instructions updated these flags only when the "S" bit was set in the opcode. R15 also held two interrupt disable flags, I (IRQ Disable) and F (FIQ Disable). Placing these flags within the PC register made sure that saving R15 automatically preserved the processor status during interrupts or other subroutine calls.
 
-6. What was the data width (machine word) of architecture?
+ What was the data width (machine word) of architecture?
 
 The ARMv2 was a 32 bit it architecture with a native machine word of 32 bits. All internal registers, the Arithmetic Logic Unit (ALU), and the external data bus measured 32 bits. This design enabled the manipulation of 32-bit integers in a single instruction cycle. The architecture supported 8 bit byte and 32 bit word data transfers but lacked native support for 16 bit half word transfers. While the data path was 32 bits wide, the addressable memory space was restricted to 26 bits (64MB) because the upper and lower bits of the Program Counter were used for the status flags.
 
-7. What was the memory layout of each system?
+What was the memory layout of each system?
 
 The memory layout of the ARMv2 systems, specifically the Acorn Archimedes, was defined by the MEMC chip. The architecture utilized a logical address space of 64 MB , even though the physical data bus was 32 bits wide. This 26 bit limitation arose because the upper 6 bits and lower 2 bits of the Program Counter were reserved for status flags, leaving only bits 2 to 25 for addressing. The address space was segmented in a linear space divided into logical pages. The physical memory was subdivided into banks controlled by the MEMC. This controller managed the mapping between the logical address space seen by the software and the physical RAM chips. The maximum possible physical RAM supported by the MEMC was 4 MB. Typical system configurations for the Acorn Archimedes ranged from 1 MB in the base A310 or A3000 models up to 4 MB in expanded machines. While the theoretical address space was 64 MB, the actual installed memory was significantly smaller due to the cost of RAM at the time and the limitations of the memory controller.
 
-8. Was virtual memory supported, and how?
+ Was virtual memory supported, and how?
 
 Virtual memory support in ARMv2 systems was implemented via the MEMC chip, which acted as a Memory Management Unit. It utilized a paging mechanism rather than segmentation. The MEMC translated logical addresses into physical addresses using a single-level page table stored in physical memory. The page size was programmable, typically ranging from 4 KB to 32 KB depending on the amount of installed RAM. But it did not support swapping pages to disk.
 
-9. What was the ISA of each architecture?
+ What was the ISA of each architecture?
 
 The Instruction Set Architecture of the ARMv2 was a Reduced Instruction Set Computer design containing a small set of approximately 44 to 46 instructions. There were five primary classes which are data processing instructions, data transfer instructions, control flow instructions, coprocessor instructions, and the Software Interrupt. All ARM instructions are 32 bits wide except the compressed 16-bit Thumb instructions.
 
-10. What were the addressing modes supported?
+ What were the addressing modes supported?
 
 When accessing an operand for a data processing or movement instruction, there are
 modes several standard techniques used to specify the desired location. Most ARM processors
 support several of these addressing modes though few support all of them. AMRv2 supports immediate, register,
 register indirect, pre-indexed, post-indexed, PC relative and multiple register. (Google Gemini, "what addresing modes does armv2 support")
 
-11. What were the I/O capabilities of each architecture?
+What were the I/O capabilities of each architecture?
 
 The ARMv2 architecture utilized Memory-Mapped I/O. It did not possess separate I/O instructions or a distinct I/O address space. Peripheral devices appeared to the processor as standard memory addresses. In the Acorn Archimedes implementation the IOC handled interrupts and peripherals like timers and the keyboard.
 
-12. Were interrupts supported?
+Were interrupts supported?
 
 The architecture supported two primary types of hardware interrupts: IRQ and FIQ. The interrupt vector table was located at the bottom of memory, starting at address 0x00000000. When an exception occu red, the processor jumped to a specific vector address.
 
-13. What data types did each architecture support?
+ What data types did each architecture support?
 
 At the hardware instruction level, the ARMv2 supported 32 bit signed and unsigned words and 8 bit signed and unsigned bytes. Integers were processed as Two's Complement signed values or unsigned values depending on the instruction interpretation. Floating-point arithmetic was not supported natively by the ARM2 hardware. Floating-point operations were typically handled via software emulation. While the instruction set reserved opcodes for coprocessors. Consequently, complex data types like decimal numbers or complex numbers had to be implemented entirely in software libraries.
 
-14. What was the speed of each system?
+What was the speed of each system?
 
 The ARM2 processor in the Acorn Archimedes typically operated at a clock frequency of 8 MHz, with later variants running at 12 MHz. Despite this relatively low clock speed, the RISC architecture allowed it to achieve approximately 4 to 5 MIPS. Most instructions executed in a single cycle, except memory accesses and complex instructions took longer.
 
-15. Did the architectures use cache memory?
+Did the architectures use cache memory?
 
 The ARMv2 processor did not use on-chip cache memory. It relied on the speed of Fast Page Mode DRAM and the MEMC to feed instructions to the processor. The lack of cache was a design choice to keep the transistor count and cost low.
-
-16. What were the typical application areas?
+What were the typical application areas?
 
 The primary application area  was the educational market in the United Kingdom. It was the standard computer in many British schools during the late 1980s and early 1990s. Beyond education, it was used in desktop publishing and television production due to its graphical capabilities.
 
 
-17. How much software was written for each discussed architecture?
+How much software was written for each discussed architecture?
 
 A moderate library of software was produced for the ARMv2, specifically targeting the RISC OS operating system. The software was mainly targeted towards education, productivity and utilities.Game library also existed, including the seminal game Zarch mainly used to showcase the machine speed. When it comes to tools it supported "BBC BASIC V" and also it had Acord C/C++ compiler suite.
 
