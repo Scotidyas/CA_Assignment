@@ -13,6 +13,12 @@ The ARMv2 architecture, utilized in the VL8C010 processor, was a General Purpose
 
 The SLC 500 architecture operates primarily as a memory-to-memory machine from the programmers perspective, utilizing a proprietary scanning architecture optimized for logic solving. The processor provides control through a processor file composed of Program Files and Data Files such as Output, Input, Status, Binary, Timer, Counter, Control, Integer, and Float (Rockwell Automation, 2008). Instructions typically operate directly on these data files rather than loading data into general-purpose registers first. For example, mathematical instructions take input values from specific memory addresses, perform the operation, and output the result to a destination memory address (Rockwell Automation, 2008).
 
+Machine Address Format
+
+The ARMv2 architecture is strictly classified as a three-address machine (Seal, 2000). Data processing instructions explicitly specify three distinct operands: a destination register (Rd) and two source operands (Rn and Operand2). For example, the instruction ADD R0, R1, R2 calculates the sum of R1 and R2 and places the result into R0.
+
+The SLC 500 also functions largely as a three-address machine for its arithmetic and logical operations. Majority of the instructions, such as ADD and SUB, take two input values (Source A and Source B) and place the result in a specified Destination address (Rockwell Automation, 2008 ). Some instructions, however, utilize a two-address format, such as the MOV instruction, which moves a Source value to a Destination location (Rockwell Automation, 2008a ), or the NEG instruction, which changes the sign of a Source and places it in a Destination (Rockwell Automation, 2008 ).
+
 
 
 
