@@ -70,3 +70,9 @@ The ARMv2 architecture utilized Memory-Mapped I/O. It did not possess separate I
 
 The SLC 500 is optimized for I/O control, utilizing a modular chassis system where I/O modules communicate across a backplane (Rockwell Automation, 2013 ). The processor updates Input (I1) and Output (O0) data files synchronously with the program scan (Rockwell Automation, 2008a ). Additionally, SLC 5/02 and higher processors support Block Transfer Read (BTR) and Block Transfer Write (BTW) instructions for transferring larger blocks of data to remote devices over a Remote I/O link (Rockwell Automation, 2008a ).
 
+Interrupts
+
+The architecture supported two primary types of hardware interrupts: IRQ and FIQ. The interrupt vector table was located at the bottom of memory, starting at address 0x00000000. When an exception occurred, the processor jumped to a specific vector address (Seal, 2000).
+
+The SLC 500 supports user-configurable interrupt routines. These include the Selectable Timed Interrupt (STI), which interrupts the scan on a periodic basis to scan a specified subroutine (Rockwell Automation, 2008a ), and the Discrete Input Interrupt (DII), which executes a subroutine when a specific input bit pattern matches a programmed compare value (Rockwell Automation, 2008a ). The SLC 500 also includes a User Fault Routine to handle system faults without shutting down the processor (Rockwell Automation, 2008a ).
+
