@@ -102,6 +102,31 @@ The primary application area was the educational market in the United Kingdom. I
 The SLC 500 is designed for a broad range of industrial automation applications, including material handling, HVAC control, high-speed assembly operations, small process control, and SCADA applications (Rockwell Automation, 2013 ). A typical installation might involve an SLC 5/05 processor controlling a bottling line via Ethernet, while monitoring sensors and actuators through local I/O modules (Rockwell Automation, 2008a ).
 
 
+Software and Tools
+
+A moderate library of software was produced for the ARMv2, specifically targeting the RISC OS operating system. The software was mainly targeted towards education, productivity and utilities. Game library also existed, including the seminal game Zarch mainly used to showcase the machine speed. When it comes to tools it supported "BBC BASIC V" and also it had Acorn C/C++ compiler suite.
+
+The SLC 500 is programmed using RSLogix 500 software, a Windows-based ladder logic programming package that provides editing, I/O configuration, and diagnostic tools (Rockwell Automation, 2013 ). Communication with the processor is handled by RSLinx software (Rockwell Automation, 2013 ), and network configuration for ControlNet and DeviceNet is managed via RSNetWorx (Rockwell Automation, 2013 ).
+
+Emulation
+
+For the ARMv2, emulators such as Arculator and Archie exist to replicate the Acorn Archimedes environment. For the SLC 500, Rockwell Automation offers RSLogix Emulate 500 software, which emulates one or more SLC 500 processors to test and debug ladder logic programs in a Windows environment without physical hardware (Rockwell Automation, 2013 ).
+
+Conclusion
 
 
+References: 
 
+Furber, S. (2000). ARM System-on-Chip Architecture (2nd Ed.). Addison-Wesley.
+
+Rockwell Automation (2005). SLC 500 BASIC and BASIC-T Modules User Manual. (Publication 1746-UM004B-EN-P). Rockwell Automation, Inc.
+
+Rockwell Automation (2008a). SLC 500 Instruction Set Reference Manual. (Publication 1747-RM001G-EN-P). Rockwell Automation, Inc.
+
+Rockwell Automation (2008b). Installation Instructions SLC 5/03, SLC 5/04, and SLC 5/05 Modular Processors. (Publication 1747-IN009B-EN-P). Rockwell Automation, Inc.
+
+Rockwell Automation (2013). SLC 500 Systems Selection Guide. (Publication 1747-SG001E-EN-E). Rockwell Automation, Inc.
+
+Seal, D. (Ed.). (2000). ARM Architecture Reference Manual. Addison-Wesley.
+
+VLSI Technology Inc. (1987). VL86C010 32-Bit RISC Microprocessor Data Manual. VLSI Technology Inc.
