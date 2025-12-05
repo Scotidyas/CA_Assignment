@@ -89,6 +89,17 @@ The ARM2 processor in the Acorn Archimedes typically operated at a clock frequen
 The SLC 500 speed is characterized by "Typical Scan Time," which is the time to execute 1K of ladder logic. The SLC 5/01 has a typical scan time of 8.0 ms/K, while the SLC 5/03 is significantly faster at 1.0 ms/K, and the SLC 5/05 is 0.9 ms/K. Bit execution times are 4 µs for the SLC 5/01 and 0.37 µs for the SLC 5/05 (Rockwell Automation, 2013 ).
 
 
+Cache Memory
+
+The ARMv2 processor did not use on-chip cache memory. It relied on the speed of Fast Page Mode DRAM and the MEMC to feed instructions to the processor. The lack of cache was a design choice to keep the transistor count and cost low (Furber, 2000).
+
+The SLC 500 processors do not utilize user-accessible cache memory. They rely on battery-backed RAM or Flash EEPROM modules for program execution and data storage (Rockwell Automation, 2013 ).
+
+Typical Application Areas
+
+The primary application area was the educational market in the United Kingdom. It was the standard computer in many British schools during the late 1980s and early 1990s. Beyond education, it was used in desktop publishing and television production due to its graphical capabilities.
+
+The SLC 500 is designed for a broad range of industrial automation applications, including material handling, HVAC control, high-speed assembly operations, small process control, and SCADA applications (Rockwell Automation, 2013 ). A typical installation might involve an SLC 5/05 processor controlling a bottling line via Ethernet, while monitoring sensors and actuators through local I/O modules (Rockwell Automation, 2008a ).
 
 
 
