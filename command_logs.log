@@ -1,0 +1,605 @@
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % touch CA_ARMv2_vs_SLC-500
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls
+CA_ARMv2_vs_SLC-500
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git init      
+Reinitialized existing Git repository in /Users/ugniusviz/pagrindinis/CA_Assignment/.git/
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "First commit, adding main file for the assignment" 
+[main (root-commit) 9c064f9] First commit, adding main file for the assignment
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 CA_ARMv2_vs_SLC-500
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git branch -M main
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 264 bytes | 264.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Scotidyas/CA_Assignment.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls
+CA_ARMv2_vs_SLC-500
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % subl CA_ARMv2_vs_SLC-500  
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls 
+CA_ARMv2_vs_SLC-500
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % mkdir docs
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % cd docs          
+(base) ugniusviz@Ugniuss-MacBook-Pro docs % mkdir ARMv2 
+(base) ugniusviz@Ugniuss-MacBook-Pro docs % mkdir SLC-500
+(base) ugniusviz@Ugniuss-MacBook-Pro docs % cd ARMv2 
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % touch ARMv2_specs
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % cd ..
+(base) ugniusviz@Ugniuss-MacBook-Pro docs % cd SLC-500 
+(base) ugniusviz@Ugniuss-MacBook-Pro SLC-500 % touch SLC-500_specs
+(base) ugniusviz@Ugniuss-MacBook-Pro SLC-500 % cd ..
+(base) ugniusviz@Ugniuss-MacBook-Pro docs % cd ..
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add . 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " Added dir's for ARMv2 and SLC-500 architectures for seperate analysis and references before writing for main assignment." 
+[main aa6cb3f]  Added dir's for ARMv2 and SLC-500 architectures for seperate analysis and references before writing for main assignment.
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 docs/ARMv2/ARMv2_specs
+ create mode 100644 docs/SLC-500/SLC-500_specs
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 540 bytes | 540.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Scotidyas/CA_Assignment.git
+   9c064f9..aa6cb3f  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % cd docs/ARMv2 
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % subl ARMv2_specs 
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % ls
+ARMv2_specs
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % mv ~/Desktop/ARM_Architecture_and_RISC_Applications.pdf ~/pagrindinis/CA_Assignment/docs/ARMv2 
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % ls
+ARM_Architecture_and_RISC_Applications.pdf
+ARMv2_specs
+(base) ugniusviz@Ugniuss-MacBook-Pro ARMv2 % cd ..
+(base) ugniusviz@Ugniuss-MacBook-Pro docs % cd ..
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git comit -m "First useful research paper found :)" 
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "First useful research paper found :)" 
+[main 56df77f] First useful research paper found :)
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 docs/ARMv2/ARM_Architecture_and_RISC_Applications.pdf
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 182.05 KiB | 26.01 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Scotidyas/CA_Assignment.git
+   aa6cb3f..56df77f  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls
+CA_ARMv2_vs_SLC-500	docs
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % touch command_logs.log 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % subl command_logs.log 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add . 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m  "Figured providing terminal logs wouldn't hurt"
+[main 5772d0f] Figured providing terminal logs wouldn't hurt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 command_logs.log
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 337 bytes | 337.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Scotidyas/CA_Assignment.git
+   56df77f..5772d0f  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " added information about the development of ARMv2 to ARMv2_specs" 
+[main ad6dd3c]  added information about the development of ARMv2 to ARMv2_specs
+ 1 file changed, 8 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 706 bytes | 706.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   5772d0f..ad6dd3c  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .                                                                        
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " added more information aboout Processor Physical Characteristics and Equipment Physical Characteristics"
+[main 463859d]  added more information aboout Processor Physical Characteristics and Equipment Physical Characteristics
+ 1 file changed, 24 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main                                                                                                 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.08 KiB | 1.08 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   ad6dd3c..463859d  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls
+CA_ARMv2_vs_SLC-500  command_logs.log  docs
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % touch docs/ARMv2/ARMv2_overview
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % subl docs/ARMv2/ARMv2_overview 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % rm docs/ARMv2/ARMv2_specs 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % rm docs/SLC-500/SLC-500_specs 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % mv ~/Desktop/Addison\ Wesley\ -\ Arm\ System-On-Chip\ Architecture,\ 2nd\ Edition.pdf docs/ARMv2/   
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls docs/ARMv2 
+ARM_Architecture_and_RISC_Applications.pdf            Addison Wesley - Arm System-On-Chip Architecture, 2nd Edition.pdf
+ARMv2_overview
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .                                                                             
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .                                                                         
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % commit -m " Added aditional references, completed the first question set for ARM" 
+zsh: command not found: commit
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " Added aditional references, completed the first question set for ARM" 
+[main ff70141]  Added aditional references, completed the first question set for ARM
+ 3 files changed, 26 insertions(+)
+ create mode 100644 docs/ARMv2/Addison Wesley - Arm System-On-Chip Architecture, 2nd Edition.pdf
+ create mode 100644 docs/ARMv2/VTI_ARM_Databook_1990.pdf
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 31.55 MiB | 2.06 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Scotidyas/CA_Assignment.git
+   d812fc0..ff70141  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % mv ~/Desktop/Addison\ Wesley\ -\ Arm\ System-On-Chip\ Architecture,\ 2nd\ Edition.pdf docs/ARMv2/   
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls docs/ARMv2 
+ARM_Architecture_and_RISC_Applications.pdf            Addison Wesley - Arm System-On-Chip Architecture, 2nd Edition.pdf
+ARMv2_overview
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .                                                                             
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .                                                                         
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % commit -m " Added aditional references, completed the first question set for ARM" 
+zsh: command not found: commit
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " Added aditional references, completed the first question set for ARM" 
+[main ff70141]  Added aditional references, completed the first question set for ARM
+ 3 files changed, 26 insertions(+)
+ create mode 100644 docs/ARMv2/Addison Wesley - Arm System-On-Chip Architecture, 2nd Edition.pdf
+ create mode 100644 docs/ARMv2/VTI_ARM_Databook_1990.pdf
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 31.55 MiB | 2.06 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Scotidyas/CA_Assignment.git
+   d812fc0..ff70141  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "answered the 3 question provided in the assignment" 
+[main 22bb71f] answered the 3 question provided in the assignment
+ 1 file changed, 6 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 688 bytes | 688.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   8bc139e..22bb71f  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "answered the 3 question provided in the assignment" 
+[main 22bb71f] answered the 3 question provided in the assignment
+ 1 file changed, 6 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 688 bytes | 688.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   8bc139e..22bb71f  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add . 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Added aditional reference manual, that had more low level information and was more readable. Also completed questions 4,5 and 6" 
+[main d890007] Added aditional reference manual, that had more low level information and was more readable. Also completed questions 4,5 and 6
+ 2 files changed, 111112 insertions(+), 3 deletions(-)
+ create mode 100644 docs/ARMv2/Additional_ARM_Manual.pdf
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 3.63 MiB | 2.11 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   22bb71f..d890007  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Read more about the memory in the ARM system and how it is layed out, its crazy to think we could do so much with that amount of ram" 
+[main 751b24c] Read more about the memory in the ARM system and how it is layed out, its crazy to think we could do so much with that amount of ram
+ 3 files changed, 5 insertions(+)
+ create mode 100644 docs/ARMv2/Oral History of Steve Furber. Computer History Museum..pdf
+ create mode 100644 docs/ARMv2/RISC OS 3 User Guide (3.0)-opt.pdf
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 17.72 MiB | 1.70 MiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   d890007..751b24c  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "delved deeper into the analysis of ARM chips by Addison Wesley, managed to find concrete answers to questions" 
+[main 3e7674f] delved deeper into the analysis of ARM chips by Addison Wesley, managed to find concrete answers to questions
+ 2 files changed, 8 insertions(+)
+ create mode 100644 .DS_Store
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.43 KiB | 1.43 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   751b24c..3e7674f  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Found the information for addressing modes supported in the references, but since it doesnt specify wether armv2 supports them, had to google and try to find other references that might give more concrete answer. Since i found none, i had to use Google Gemini to find the answer for the question. Though the validity of the answer is questionable, for I was unable to find information that support that claim."
+[main e837f90] Found the information for addressing modes supported in the references, but since it doesnt specify wether armv2 supports them, had to google and try to find other references that might give more concrete answer. Since i found none, i had to use Google Gemini to find the answer for the question. Though the validity of the answer is questionable, for I was unable to find information that support that claim.
+ 1 file changed, 8 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 898 bytes | 898.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   3e7674f..e837f90  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Added information about the I/O capabilities" 
+[main 0d1c800] Added information about the I/O capabilities
+ 1 file changed, 8 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 665 bytes | 665.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   e837f90..0d1c800  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "wrote about ARMv2 support for interupts and data types" 
+[main e9f2219] wrote about ARMv2 support for interupts and data types
+ 1 file changed, 7 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 927 bytes | 927.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   0d1c800..e9f2219  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Since i've already talked about the speed that ARMv2 could achieve i added aditional useful information about the approximate MIPS and execution" 
+[main af37894] Since i've already talked about the speed that ARMv2 could achieve i added aditional useful information about the approximate MIPS and execution
+ 1 file changed, 4 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 761 bytes | 761.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   e9f2219..af37894  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "watched a youtube video about armv2 learned some interesting things about its applications in ~1990s" 
+[main 312e57b] watched a youtube video about armv2 learned some interesting things about its applications in ~1990s
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 866 bytes | 866.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   af37894..312e57b  main -> main
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % wget https://literature.rockwellautomation.com/idc/groups/literature/documents/sg/1747-sg001_-en-p.pdf docs/SLC-500 
+--2025-12-02 14:26:13--  https://literature.rockwellautomation.com/idc/groups/literature/documents/sg/1747-sg001_-en-p.pdf
+Resolving literature.rockwellautomation.com (literature.rockwellautomation.com)... 104.81.63.24
+Connecting to literature.rockwellautomation.com (literature.rockwellautomation.com)|104.81.63.24|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2969236 (2.8M) [application/pdf]
+Saving to: ‘1747-sg001_-en-p.pdf’
+
+1747-sg001_-en-p.pdf                            100%[=====================================================================================================>]   2.83M  4.10MB/s    in 0.7s    
+
+2025-12-02 14:26:14 (4.10 MB/s) - ‘1747-sg001_-en-p.pdf’ saved [2969236/2969236]
+
+Prepended http:// to 'docs/SLC-500'
+--2025-12-02 14:26:14--  http://docs/SLC-500
+Resolving docs (docs)... failed: nodename nor servname provided, or not known.
+wget: unable to resolve host address ‘docs’
+FINISHED --2025-12-02 14:26:14--
+Total wall clock time: 1.2s
+Downloaded: 1 files, 2.8M in 0.7s (4.10 MB/s)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % wget https://literature.rockwellautomation.com/idc/groups/literature/documents/um/1746-um004_-en-p.pdf docs/SLC-500 
+--2025-12-02 14:26:41--  https://literature.rockwellautomation.com/idc/groups/literature/documents/um/1746-um004_-en-p.pdf
+Resolving literature.rockwellautomation.com (literature.rockwellautomation.com)... 104.81.63.24
+Connecting to literature.rockwellautomation.com (literature.rockwellautomation.com)|104.81.63.24|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1106426 (1.1M) [application/pdf]
+Saving to: ‘1746-um004_-en-p.pdf’
+
+1746-um004_-en-p.pdf                            100%[=====================================================================================================>]   1.05M   303KB/s    in 3.6s    
+
+2025-12-02 14:26:45 (303 KB/s) - ‘1746-um004_-en-p.pdf’ saved [1106426/1106426]
+
+Prepended http:// to 'docs/SLC-500'
+--2025-12-02 14:26:45--  http://docs/SLC-500
+Resolving docs (docs)... failed: nodename nor servname provided, or not known.
+wget: unable to resolve host address ‘docs’
+FINISHED --2025-12-02 14:26:45--
+Total wall clock time: 4.3s
+Downloaded: 1 files, 1.1M in 3.6s (303 KB/s)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % wget https://literature.rockwellautomation.com/idc/groups/literature/documents/in/1747-in009_-en-p.pdf docs/SLC-500 
+--2025-12-02 14:27:31--  https://literature.rockwellautomation.com/idc/groups/literature/documents/in/1747-in009_-en-p.pdf
+Resolving literature.rockwellautomation.com (literature.rockwellautomation.com)... 104.81.63.24
+Connecting to literature.rockwellautomation.com (literature.rockwellautomation.com)|104.81.63.24|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 456283 (446K) [application/pdf]
+Saving to: ‘1747-in009_-en-p.pdf’
+
+1747-in009_-en-p.pdf                            100%[=====================================================================================================>] 445.59K   257KB/s    in 1.7s    
+
+2025-12-02 14:27:34 (257 KB/s) - ‘1747-in009_-en-p.pdf’ saved [456283/456283]
+
+Prepended http:// to 'docs/SLC-500'
+--2025-12-02 14:27:34--  http://docs/SLC-500
+Resolving docs (docs)... failed: nodename nor servname provided, or not known.
+wget: unable to resolve host address ‘docs’
+FINISHED --2025-12-02 14:27:34--
+Total wall clock time: 2.5s
+Downloaded: 1 files, 446K in 1.7s (257 KB/s)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % wget https://literature.rockwellautomation.com/idc/groups/literature/documents/rm/1747-rm001_-en-p.pdf docs/SLC-500 
+--2025-12-02 14:28:22--  https://literature.rockwellautomation.com/idc/groups/literature/documents/rm/1747-rm001_-en-p.pdf
+Resolving literature.rockwellautomation.com (literature.rockwellautomation.com)... 104.81.63.24
+Connecting to literature.rockwellautomation.com (literature.rockwellautomation.com)|104.81.63.24|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 7167992 (6.8M) [application/pdf]
+Saving to: ‘1747-rm001_-en-p.pdf’
+
+1747-rm001_-en-p.pdf                            100%[=====================================================================================================>]   6.83M  15.3MB/s    in 0.4s    
+
+2025-12-02 14:28:22 (15.3 MB/s) - ‘1747-rm001_-en-p.pdf’ saved [7167992/7167992]
+
+Prepended http:// to 'docs/SLC-500'
+--2025-12-02 14:28:22--  http://docs/SLC-500
+Resolving docs (docs)... failed: nodename nor servname provided, or not known.
+wget: unable to resolve host address ‘docs’
+FINISHED --2025-12-02 14:28:22--
+Total wall clock time: 0.7s
+Downloaded: 1 files, 6.8M in 0.4s (15.3 MB/s)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Getting research papers for SLC"
+[main 9fbf056] Getting research papers for SLC
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1746-um004_-en-p.pdf
+ create mode 100644 1747-in009_-en-p.pdf
+ create mode 100644 1747-rm001_-en-p.pdf
+ create mode 100644 1747-sg001_-en-p.pdf
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 8.81 MiB | 1.34 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Scotidyas/CA_Assignment.git
+   9de5f12..9fbf056  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls
+1746-um004_-en-p.pdf 1747-in009_-en-p.pdf 1747-rm001_-en-p.pdf 1747-sg001_-en-p.pdf CA_ARMv2_vs_SLC-500  command_logs.log  docs
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % mv *.pdf docs/SLC-500 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % ls
+CA_ARMv2_vs_SLC-500  command_logs.log  docs
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "starting the comparison in the main file" 
+[main 23ac539] starting the comparison in the main file
+ 7 files changed, 17 insertions(+), 18 deletions(-)
+ create mode 100644 docs/.DS_Store
+ rename 1746-um004_-en-p.pdf => docs/SLC-500/1746-um004_-en-p.pdf (100%)
+ rename 1747-in009_-en-p.pdf => docs/SLC-500/1747-in009_-en-p.pdf (100%)
+ rename 1747-rm001_-en-p.pdf => docs/SLC-500/1747-rm001_-en-p.pdf (100%)
+ rename 1747-sg001_-en-p.pdf => docs/SLC-500/1747-sg001_-en-p.pdf (100%)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.20 KiB | 2.20 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   9fbf056..23ac539  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "First comparison analysis for elementary base and physical characteristics" 
+[main d012f24] First comparison analysis for elementary base and physical characteristics
+ 1 file changed, 9 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.65 KiB | 1.65 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Scotidyas/CA_Assignment.git
+   23ac539..d012f24  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "Expanded on architecture type" 
+[main 9855fa5] Expanded on architecture type
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.37 KiB | 1.37 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   d012f24..9855fa5  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add . 
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " Wrote about machine address format" 
+[main 776af40]  Wrote about machine address format
+ 1 file changed, 6 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin mian
+error: src refspec mian does not match any
+error: failed to push some refs to 'https://github.com/Scotidyas/CA_Assignment.git'
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 791 bytes | 791.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   9855fa5..776af40  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " wrote about registers and flags"
+[main 65dab6e]  wrote about registers and flags
+ 1 file changed, 7 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.50 KiB | 1.50 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   776af40..65dab6e  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "commit fatigue.. Wrote about machine word width" 
+[main 8e14a34] commit fatigue.. Wrote about machine word width
+ 1 file changed, 6 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 948 bytes | 948.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   65dab6e..8e14a34  main -> main
+branch 'main' set up to track 'origin/main'.
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m " wrote about memory layout and how virtual memory works in both architectures" 
+[main e2e8f73]  wrote about memory layout and how virtual memory works in both architectures
+ 1 file changed, 6 insertions(+), 16 deletions(-)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.61 KiB | 1.61 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   8e14a34..e2e8f73  main -> main
+branch 'main' set up to track 'origin/main'.
+
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git add .
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git commit -m "added more information about interrupts"  
+[main 780060c] added more information about interrupts
+ 1 file changed, 6 insertions(+)
+(base) ugniusviz@Ugniuss-MacBook-Pro CA_Assignment % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 717 bytes | 717.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Scotidyas/CA_Assignment.git
+   8080f9e..780060c  main -> main
+branch 'main' set up to track 'origin/main'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
